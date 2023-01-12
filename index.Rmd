@@ -6,7 +6,7 @@ header-includes:
 - \usepackage{booktabs}
 - \usepackage{makecell}
 output:
-  pdf_document:   
+  html_document:   
   number_sections: yes
 ---
   
@@ -426,7 +426,7 @@ title("Semi-elasticities", line = -2)
 for(k in 1:(length(bks) - 1)) {
   polygon(c(bks[k], bks[k+1], bks[k+1], bks[k], bks[k]),
           c(-0.28, -0.28, 0.08, 0.08, -0.28),
-          col = rev(rwb(20))[k])
+          col = (rwb(20))[k])
   text(bks[k], 0, round(bks[k], 2), pos = 3)
 }
   text(bks[k+1], 0, round(bks[k+1], 2), pos = 3)
